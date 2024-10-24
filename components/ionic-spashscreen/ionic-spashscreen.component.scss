@@ -1,0 +1,205 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  img {
+    z-index: 1;
+    width: 100%;
+    margin-right: 100%;
+    margin-bottom: 100%;
+    animation: fadeIn 7s ease forwards;
+  }
+
+  .screen {
+    background: linear-gradient(to right, #83786F, #007167);
+    position: fixed;
+    height: 101%;
+    width: 100%;
+  }
+
+  .screen__content {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+
+  }
+
+  .screen__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+
+  .screen__background__shape {
+    transform: rotate(45deg);
+    position: absolute;
+  }
+
+  .screen__background__shape1 {
+    height: 55%;
+    width: 140%;
+    background: #FFF;
+    top: 10%;
+    right: 45%;
+    border-radius: 0 72px 0 0;
+
+  }
+
+  .screen__background__shape2 {
+    height: 35%;
+    width: 95%;
+    background: #005f57;
+    top: -172px;
+    right: 0;
+    border-radius: 20px;
+  }
+
+  .screen__background__shape3 {
+    height: 540px;
+    width: 190px;
+    background: linear-gradient(270deg, #83786F, #5f5751);
+    top: 100px;
+    right: 0;
+    border-radius: 32px;
+
+  }
+
+  .screen__background__shape4 {
+    height: 360px;
+    width: 185px;
+    background: #025750;
+    top: 50%;
+    right: 20%;
+    border-radius: 60px;
+
+  }
+
+  .steam {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 30%;
+    background-color: #fff;
+    margin-top: -75px;
+    margin-left: 75px;
+    z-index: 1;
+    opacity: 0;
+  }
+}
+
+
+
+#steam1 {
+  -webkit-animation: steam1 5s ease-out infinite;
+  animation: steam1 5s ease-out infinite;
+}
+
+@-webkit-keyframes steam1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.25);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-500px) translateX(-20px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes steam1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(10);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(-100px) translateX(-20px) scale(1);
+    opacity: 0;
+  }
+}
+
+
+
+// mobile responsive
+@media (min-width: 680px) {
+  .container {
+    img {
+      width: 100%;
+      margin-right: 250%;
+      margin-bottom: 55%;
+    }
+
+    .screen__background__shape1 {
+      height: 70%;
+      width: 100%;
+      top: 10%;
+      right: 60%;
+      border-radius: 0 72px 0 0;
+    }
+
+    .screen__background__shape2 {
+      height: 220px;
+      width: 220px;
+      top: -170px;
+      right: 0;
+      border-radius: 32px;
+    }
+
+    .screen__background__shape3 {
+      height: 540px;
+      width: 190px;
+      top: -24px;
+      right: 0;
+      border-radius: 32px;
+
+    }
+
+    .screen__background__shape4 {
+      height: 400px;
+      width: 200px;
+      top: 420px;
+      right: 50px;
+      border-radius: 60px;
+    }
+  }
+
+
+}
+
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .container {
+    img {
+      width: 100%;
+      margin-right: 350%;
+      margin-bottom: -100%;
+    }
+
+    .screen__background__shape1 {
+      height: 80%;
+      width: 80%;
+      top: 10%;
+      right: 60%;
+      border-radius: 0 72px 0 0;
+    }
+  }
+
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

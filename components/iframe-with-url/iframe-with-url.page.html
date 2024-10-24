@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="setupBackButton()">
+        <ion-icon *ngIf="!this._gService.isAR$.value"
+          name="arrow-back"></ion-icon>
+        {{'BACK_BUTTON_TEXT' | translate}}
+        <ion-icon *ngIf="this._gService.isAR$.value"
+          name="arrow-forward"></ion-icon>
+        <ion-icon></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="this.url">
+  <iframe class='webPage'
+    [src]="url"
+    style="width:100%; height:100%;border: 0px;"></iframe>
+  >
+</ion-content>
+
+<!-- [ngStyle]="{'padding-top': isIOS ? '12%' : '0'}" -->

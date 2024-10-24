@@ -1,0 +1,28 @@
+<ion-card style="margin-top: 15%">
+  <ion-card-header>
+    <ion-card-title>{{ "VERSION_CHANGED.V_TITLE" | translate }}</ion-card-title>
+    <ion-card-subtitle
+      >{{ "VERSION_CHANGED.NEW_VERSION" | translate }}
+      {{ APP_VERSION }}</ion-card-subtitle
+    >
+  </ion-card-header>
+
+  <ion-card-content>
+    {{ "VERSION_CHANGED.V_DESCRIPTION_1" | translate }}
+  </ion-card-content>
+  <ion-card-content>
+    {{ "VERSION_CHANGED.V_DESCRIPTION_2" | translate }}
+  </ion-card-content>
+  <ion-card-content>
+    {{ "VERSION_CHANGED.V_THANKS" | translate }}
+  </ion-card-content>
+  <div class="m-5 text-center">
+    <ion-button
+      class="m-5"
+      fill="outline"
+      shape="round"
+      (click)="updateNow()"
+      >{{ "VERSION_CHANGED.V_UPDATE" | translate }}</ion-button
+    >
+  </div>
+</ion-card>

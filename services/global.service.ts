@@ -9,7 +9,7 @@ import {
 } from '@ionic/angular/standalone';
 import { App_Direction, Language, PlatformType } from '../enums/shared.enum';
 import { TranslateService } from '@ngx-translate/core';
-import { mConstant } from '../config/m-const';
+import { mConstant } from '../config/nst';
 import { LocalStorageService } from './localstorage.service';
 import moment from 'moment';
 import { BehaviorSubject } from 'rxjs';
